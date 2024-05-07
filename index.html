@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Loading Screen</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+  }
+
+  .loading-screen {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 8px solid transparent;
+    border-top-color: #3498db;
+    animation: spin 1.5s linear infinite;
+  }
+
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+</style>
+</head>
+<body>
+  <div class="loading-screen"></div>
+
+  <script>
+    // Optionally, you can add JavaScript to hide the loading screen when the page has finished loading
+    window.addEventListener('load', function() {
+      var loadingScreen = document.querySelector('.loading-screen');
+      loadingScreen.style.display = 'none';
+    });
+  </script>
+</body>
+</html>
